@@ -6,11 +6,13 @@ dotenv.config();
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.start((context) => {
-  context.reply('Olá, somos o Podemos de Jucurutu!');
+  const name = context.from.first_name;
+
+  context.reply(`Olá ${name}, somos o Podemos de Jucurutu!`);
 });
 
 bot.help((context) => {
-  context.reply('Nós queremos ajudar Jucurutu a crescer!');
+  context.reply('/start');
 });
 
 bot.launch();
