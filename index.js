@@ -17,7 +17,7 @@ bot.on('text', (context) => {
   // Aqui o bot vai responder com a mesma mensagem que o usuário enviar
   const opinion = context.message.text;
 
-  axios.post('opinions', {
+  axios.post('https://podemos-participar.herokuapp.com/opinions', {
     opinion,
   })
 
