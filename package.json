@@ -7,6 +7,7 @@
     "start": "micro-bot"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "micro-bot": "^2.5.3"
   }
 }

@@ -1,8 +1,5 @@
 const { Composer } = require('micro-bot');
-const dotenv = require('dotenv');
-
-dotenv.config();
-
+const axios = require('axios');
 // const bot = new Telegraf(process.env.BOT_TOKEN);
 
 const bot = new Composer;
@@ -18,7 +15,8 @@ bot.start((context) => {
 
 bot.on('text', (context) => {
   // Aqui o bot vai responder com a mesma mensagem que o usuário enviar
-  context.reply(context.message.text);
+
+  context.reply(`Obrigado por nos enviar sua opinião. Ela foi a seguinte: ${context.message.text}`);
 });
 
 // bot.launch();
