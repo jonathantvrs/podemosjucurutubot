@@ -19,6 +19,8 @@ bot.on('text', (context) => {
 
   axios.post('https://podemos-participar.herokuapp.com/opinions', {
     opinion,
+  }).then(() => {
+    console.log('Salvo')
   })
 
   context.reply(`Obrigado por nos enviar sua opinião. Ela foi a seguinte: ${opinion}`);
