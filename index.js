@@ -15,8 +15,13 @@ bot.start((context) => {
 
 bot.on('text', (context) => {
   // Aqui o bot vai responder com a mesma mensagem que o usuário enviar
+  const opinion = context.message.text;
 
-  context.reply(`Obrigado por nos enviar sua opinião. Ela foi a seguinte: ${context.message.text}`);
+  axios.post('opinions', {
+    opinion,
+  })
+
+  context.reply(`Obrigado por nos enviar sua opinião. Ela foi a seguinte: ${opinion}`);
 });
 
 // bot.launch();
