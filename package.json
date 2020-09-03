@@ -4,13 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon"
+    "start": "micro-bot"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "telegraf": "^3.38.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "micro-bot": "^2.5.3"
   }
 }
